@@ -17,6 +17,26 @@
             "\t${3:code}",
             "end"
         ],
-        "description": "Executes code if its falsy or else doing other stuff."
+        "description": "Executes code if its falsy or else running the other code."
+    },
+    "if condition": {
+        "prefix": ["unless"],
+        "body": [
+            "if ${1:condition}",
+            "\t${2:code}",
+            "else",
+            "\t${3:code}",
+            "end"
+        ],
+        "description": "Executes code if its truthy or else running the other code."
+    },
+    "times loop block": {
+        "prefix": ["t", "times"],
+        "body": [
+            "${1:amount}.times do |i|",
+            "\t${2:code}",
+            "end"
+        ],
+        "description": "Calls the given block self times with each integer in (0..self-1):"
     }
 }

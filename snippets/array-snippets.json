@@ -46,15 +46,57 @@
         "body": ["at(${1:object})"],
         "description": "Returns the element at Integer\noffset index; does not modify self."
     },
-    "collect {|element| block}": {
-        "scope": "ruby",
-        "prefix": ["collect"],
-        "body": ["collect {|${1:element}| ${2:block} }"],
-        "description": "Returns a new array with the results of running block once for every element in enum."
+    "bsearch": {
+        "prefix": ["bs", "bsearch"],
+        "body": ["bsearch"],
+        "description": "Returns an element from self selected by a binary search."
+    },
+    "bsearch inline": {
+        "prefix": ["bs", "bsearch"],
+        "body": ["bsearch {|${1:element}| ${2:condition}}"],
+        "description": "Returns the element wich mets the condition first."
+    },
+    "bsearch block": {
+        "prefix": ["bs", "bsearch"],
+        "body": [
+            "bsearch do |${1:element}|",
+            "\t ${2:condition}",
+            "end"
+        ],
+        "description": "Returns the element wich mets the condition first."
+    },
+    "bsearch_index": {
+        "prefix": ["bs", "bsi", "bsearch"],
+        "body": ["bsearch_index"],
+        "description": "Searches self as described at method bsearch,\nbut returns the index of the found element\ninstead of the element itself."
+    },
+    "bsearch_index inline": {
+        "prefix": ["bs", "bsi", "bsearch"],
+        "body": ["bsearch_index {|${1:element}| ${2:condition}}"],
+        "description": "Searches self as described at method bsearch,\nbut returns the index of the found element\ninstead of the element itself."
+    },
+    "bsearch_index block": {
+        "prefix": ["bs", "bsi", "bsearch"],
+        "body": [
+            "bsearch_index do |${1:element}|",
+            "\t ${2:condition}",
+            "end"
+        ],
+        "description": "Searches self as described at method bsearch,\nbut returns the index of the found element\ninstead of the element itself."
+    },
+    "clear": {
+        "prefix": ["cl","clear"],
+        "body": ["clear"],
+        "description": "Removes all elements from self:"
     },
     "collect": {
         "prefix": ["collect"],
         "body": ["collect"],
+        "description": "Returns a new array with the results of running block once for every element in enum."
+    },
+    "collect!": {
+        "prefix": ["cl!", "collect!"],
+        "body": ["collect!"],
         "description": "Returns a new array with the results of running block once for every element in enum."
     },
     "each {|element| block}": {
