@@ -1,0 +1,12 @@
+{
+    "gsub(pattern, replacement)": {
+        "prefix": ["g", "gs"],
+        "body": ["gsub($1)"],
+        "description": "Returns a copy of self with all occurrences of the given pattern replaced."
+    },
+    "gsub!(pattern, replacement)": {
+        "prefix": ["g", "gs", "gs!"],
+        "body": ["gsub!($1)"],
+        "description": "Performs the specified substring replacement(s) on self;\nReturns self if any replacement occurred, nil otherwise."
+    }
+}

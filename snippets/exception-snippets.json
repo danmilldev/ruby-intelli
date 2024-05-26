@@ -1,0 +1,22 @@
+{
+    "as_json": {
+        "prefix": ["as", "as_json"],
+        "body": ["as_json"],
+        "description": "Methods Exception#as_json and Exception.json_create\nmay be used to serialize and deserialize\na Exception object; see Marshal."
+    },
+    "backtrace": {
+        "prefix": ["ba", "backtrace"],
+        "body": ["backtrace"],
+        "description": "Returns any backtrace associated with the exception"
+    },
+    "backtrace_locations": {
+        "prefix": ["ba", "bl", "backtrace_locations"],
+        "body": ["backtrace_locations"],
+        "description": "Returns any backtrace associated with\nthe exception with an array of locations."
+    },
+    "cause": {
+        "prefix": ["cause"],
+        "body": ["cause"],
+        "description": "Returns the previous exception ($!) at the time this exception was raised."
+    }
+}

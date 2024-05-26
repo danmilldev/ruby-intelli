@@ -1,0 +1,69 @@
+{
+  "name": "ruby-intelli",
+  "displayName": "Ruby-Intelli",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "ruby-intelli.helloWorld",
+      "title": "Hello World"
+    }],
+    "snippets": [
+      {
+        "language": "ruby",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "erb",
+        "path": "./snippets/rails-snippets/loop-snippet.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/array-snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/hash-snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/integer-snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/class-snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/string-snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/compare-snippets.json"
+      }
+    ],
+    "hoverProvider": "true"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.89.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}

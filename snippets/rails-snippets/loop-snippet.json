@@ -1,0 +1,11 @@
+{
+    "until loop": {
+        "prefix": ["until"],
+        "body": [
+            "<% until ${1:condition} do %>",
+            "\t${2:code}",
+            "<% end %>"
+        ],
+        "description": "The until loop executes while condition is not met."
+    }
+}

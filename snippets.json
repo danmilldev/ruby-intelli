@@ -1,0 +1,22 @@
+{
+    "until loop": {
+        "prefix": ["until"],
+        "body": [
+            "until ${1:condition} do",
+            "\t${2:code}",
+            "end"
+        ],
+        "description": "The until loop executes while condition is not met."
+    },
+    "unless condition": {
+        "prefix": ["unless"],
+        "body": [
+            "unless ${1:condition}",
+            "\t${2:code}",
+            "else",
+            "\t${3:code}",
+            "end"
+        ],
+        "description": "Executes code if its falsy or else doing other stuff."
+    }
+}

@@ -1,0 +1,207 @@
+{
+    "abbrev": {
+        "prefix": ["abbrev"],
+        "body": ["abbrev"],
+        "description": "Calculates the set of unambiguous abbreviations for the strings in self."
+    },
+    "abbrev(pattern)": {
+        "prefix": ["abbrev"],
+        "body": ["abbrev(${1:pattern})"],
+        "description": "The optional pattern parameter\nis a pattern or a string.\nOnly input strings that match the pattern\nor start with the string\nare included in the output hash."
+    },
+    "all? {|element| condition}": {
+        "prefix": ["all?"],
+        "body": ["all? {|${1:element}| ${2:condition} }"],
+        "description": "Returns true if all elements of self meet a given criterion."
+    },
+    "all?": {
+        "prefix": ["all?"],
+        "body": ["all?"],
+        "description": "Returns true if all elements of self are truthy."
+    },
+    "any? {|element| condition}": {
+        "prefix": ["any?"],
+        "body": [
+            "any? {|${1:element}| ${2:condition} }"
+        ],
+        "description": "Returns true if any element of self meets a given criterion."
+    },
+    "any?": {
+        "prefix": ["any?"],
+        "body": ["any?"],
+        "description": "Returns true if self has any truthy element"
+    },
+    "append(object)": {
+        "prefix": ["append", "ap"],
+        "body": ["append(${1:object})"],
+        "description": "Equivalent to .push(object)\n will add object to array."
+    },
+    "assoc(object)": {
+        "prefix": ["assoc", "as"],
+        "body": ["assoc(${1:object})"],
+        "description": "Returns the first contained array that matches\n(that is, the first associated array),\nor nil if no match is found."
+    },
+    "at(index)": {
+        "prefix": ["at"],
+        "body": ["at(${1:object})"],
+        "description": "Returns the element at Integer\noffset index; does not modify self."
+    },
+    "collect {|element| block}": {
+        "scope": "ruby",
+        "prefix": ["collect"],
+        "body": ["collect {|${1:element}| ${2:block} }"],
+        "description": "Returns a new array with the results of running block once for every element in enum."
+    },
+    "collect": {
+        "prefix": ["collect"],
+        "body": ["collect"],
+        "description": "Returns a new array with the results of running block once for every element in enum."
+    },
+    "each {|element| block}": {
+        "prefix": ["each"],
+        "body": [
+            "each do |${1:element}|",
+            "\t ${2:block}",
+            "end"
+        ],
+        "description": "Calls block once for each element in self, passing that element as a parameter."
+    },
+    "map {|element| block}": {
+        "prefix": ["map"],
+        "body": [
+            "map do |${1:element}|",
+            "\t ${2:block}",
+            "end"
+        ],
+        "description": "Invokes the given block once for each element of self."
+    },
+    "select inline": {
+        "prefix": ["select"],
+        "body": ["select {|${1:element}| ${2:block} }"],
+        "description": "Returns an array containing all elements of enum for which the given block returns a true value."
+    },
+    "select block": {
+        "prefix": ["select"],
+        "body": [
+            "select do |${1:element}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Returns an array containing all elements of enum for which the given block returns a true value."
+    },
+    "reject inline": {
+        "prefix": ["reject"],
+        "body": ["reject {|${1:element}| ${2:block} }"],
+        "description": "Returns an array for all elements of enum for which the given block returns false."
+    },
+    "reject block": {
+        "prefix": ["reject"],
+        "body": [
+            "reject do |${1:element}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Returns an array for all elements of enum for which the given block returns false."
+    },
+    "find inline": {
+        "prefix": ["find"],
+        "body": ["find {|${1:element}| ${2:block} }"],
+        "description": "Returns the first element for which block is not false."
+    },
+    "find block": {
+        "prefix": ["find"],
+        "body": [
+            "find do |${1:element}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Returns the first element for which block is not false."
+    },
+    "reduce inline": {
+        "prefix": ["reduce"],
+        "body": ["reduce {|${1:acc}, ${2:element}| ${3:block} }"],
+        "description": "Combines all elements of enum by applying a binary operation, specified by a block."
+    },
+    "reduce block": {
+        "prefix": ["reduce"],
+        "body": [
+            "reduce do |${1:element}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Combines all elements of enum by applying a binary operation, specified by a block."
+    },
+    "sort": {
+        "prefix": ["sort"],
+        "body": ["sort"],
+        "description": "Returns a new array created by sorting self."
+    },
+    "sort inline": {
+        "prefix": ["sort"],
+        "body": ["sort {|${1:a}, ${2:b}| ${3:block} }"],
+        "description": "Returns a new array created by sorting self with the specified block."
+    },
+    "sort block": {
+        "prefix": ["sort"],
+        "body": [
+            "sort do |${1:a}, ${2:b}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Returns a new array created by sorting self with the specified block."
+    },
+    "sort!": {
+        "prefix": ["sort!"],
+        "body": ["sort!"],
+        "description": "Returns self with its elements sorted in place."
+    },
+    "sort! inline": {
+        "prefix": ["sort!"],
+        "body": ["sort! {|${1:a}, ${2:b}| ${3:block} }"],
+        "description": "Returns a new array created by sorting self with the specified block."
+    },
+    "sort! block": {
+        "prefix": ["sort!"],
+        "body": [
+            "sort! do |${1:a}, ${2:b}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Returns a new array created by sorting self with the specified block."
+    },
+    "sort_by! inline": {
+        "prefix": ["sort_by", "sb"],
+        "body": ["sort_by {|${1:element}| ${2:block} }"],
+        "description": "Sorts the elements of self in place, using an ordering determined by the block; returns self."
+    },
+    "sort_by! block": {
+        "prefix": ["sort_by", "sb"],
+        "body": [
+            "sort_by do |${1:element}|",
+            "\t${2:block}",
+            "end"
+        ],
+        "description": "Sorts the elements of self in place, using an ordering determined by the block; returns self."
+    },
+    "sum": {
+        "prefix": ["sum"],
+        "body": [
+            "sum"
+        ],
+        "description": "Returns a new array where if it\nwas successfull added everything together.\nWARNING: Only works on numbers this way."
+    },
+    "sum(elemnt to add)": {
+        "prefix": ["sum"],
+        "body": [
+            "sum(${1:code})"
+        ],
+        "description": "Returns a new array with the code at the start added\n and added everything else of the array to it after that."
+    },
+    "take": {
+        "prefix": ["take"],
+        "body": [
+            "take(${1:amount})"
+        ],
+        "description": "Returns a new Array containing the first n element of self,\n where n is a non-negative Integer; does not modify self."
+    }
+}

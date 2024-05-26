@@ -1,0 +1,27 @@
+{
+    "abs": {
+        "prefix": ["a", "ab"],
+        "body": ["abs"],
+        "description": "Returns the absolute value of self."
+    },
+    "allbits?": {
+        "prefix": ["a", "al"],
+        "body": ["allbits?"],
+        "description": "Returns true if all bits that are set (=1) in mask are also set in self; returns false otherwise."
+    },
+    "anybits?": {
+        "prefix": ["a", "an"],
+        "body": ["anybits?"],
+        "description": "Returns true if any bit that is set (=1) in mask is also set in self; returns false otherwise."
+    },
+    "bit_length": {
+        "prefix": ["b", "bi"],
+        "body": ["bit_length"],
+        "description": "Returns the number of bits of the value of self,\nwhich is the bit position of the highest-order bit that is different from the sign bit \n(where the least significant bit has bit position 1).\nIf there is no such bit (zero or minus one), returns zero."
+    },
+    "even?": {
+        "prefix": ["ev", "e"],
+        "body": ["even?"],
+        "description": "Returns true if self is an even number, false otherwise."
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "class": {
+        "prefix": ["class"],
+        "body": [
+            "class ${1:name}",
+            "\t${2:code}",
+            "end"
+        ],
+        "description": "Creates a simple class structure."
+    },
+    "inherited": {
+        "prefix": ["i", "in", "inherited"],
+        "body": [
+            "def self.inherited(subclass)",
+            "\t${1:code}",
+            "end"
+        ],
+        "description": "Callback invoked whenever a subclass of the current class is created."
+    },
+    "new(args)": {
+        "prefix": ["n", "new"],
+        "body": [
+            "new(${1:arguments})"
+        ],
+        "description": "Calls allocate to create a new object\n of class’s class, then invokes that object’s\n initialize method, passing it args"
+    }
+}

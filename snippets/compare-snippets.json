@@ -1,0 +1,23 @@
+{
+    "between?(min, max)": {
+        "prefix": ["b", "be", "?be", "between?"],
+        "body": [
+            "between?(${1:min}.first, ${2:max}.last)"
+        ],
+        "description": "Returns false if obj <=> min is less\nthan zero or if obj <=> max is greater\nthan zero, true otherwise."
+    },
+    "clamp(min, max)": {
+        "prefix": ["c", "cl", "clamp"],
+        "body": [
+            "clamp(${1:min}.first, ${2:max}.last)"
+        ],
+        "description": "In (min, max) form, returns min\nif obj <=> min is less than zero, max if obj\n<=> max is greater than zero, and obj otherwise."
+    },
+    "clamp(range)": {
+        "prefix": ["c", "cl", "clamp"],
+        "body": [
+            "clamp(${1:range})"
+        ],
+        "description": "In (range) form, returns range.begin if obj\n<=> range.begin is less than zero, range.end\nif obj <=> range.end is greater than zero, and obj otherwise."
+    }
+}
