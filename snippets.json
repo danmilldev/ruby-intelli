@@ -38,5 +38,25 @@
             "end"
         ],
         "description": "Calls the given block self times with each integer in (0..self-1):"
+    },
+    "times loop inline": {
+        "prefix": ["t", "times"],
+        "body": ["${1:amount}.times {|i| ${2:code} }"],
+        "description": "Calls the given block self times with each integer in (0..self-1):"
+    },
+    "chomp": {
+        "prefix": ["c", "ch", "chomp", "gets"],
+        "body": ["${1:variable_name} = gets.chomp"],
+        "description": "Creates a variable and passing console input into it.\nAswell as removing trailing lines."
+    },
+    "is_a?(class)": {
+        "prefix": ["ia", "_a", "is_a", "?i", "?is"],
+        "body": ["is_a?(${1:class})"],
+        "description": "Returns true if class is the class of obj,\n or if class is one of the superclasses of obj or modules included in obj."
+    },
+    "nil?": {
+        "prefix": ["?n", "?ni", "nil?", "n"],
+        "body": ["nil?"],
+        "description": "Returns true if self is nil."
     }
 }
