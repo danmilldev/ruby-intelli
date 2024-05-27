@@ -1,0 +1,52 @@
+{
+    "keys": {
+        "prefix": ["keys"],
+        "body": ["keys"],
+        "description": "Returns a new Array containing all keys in self:"
+    },
+    "values": {
+        "prefix": ["values"],
+        "body": ["values"],
+        "description": "Returns a new Array containing all values in self:"
+    },
+    "merge(other hashes)": {
+        "prefix": ["merge", "me"],
+        "body": ["merge(${1:hashes})"],
+        "description": "Returns the new Hash formed with other hash."
+    },
+    "merge!(other hashes)": {
+        "prefix": ["merge!", "me"],
+        "body": ["merge!(${1:hashes})"],
+        "description": "Returns the new Hash formed with other hash on self."
+    },
+    "fetch(key)": {
+        "prefix": ["fetch", "f", "fe"],
+        "body": ["fetch(${1:key})"],
+        "description": "Returns the value for the given key, if found."
+    },
+    "fetch_values(keys)": {
+        "prefix": ["fetch", "f", "fv"],
+        "body": ["fetch_values(${1:keys})"],
+        "description": "Returns a new Array containing the values associated with the given keys *keys."
+    },
+    "key?(key)": {
+        "prefix": ["?k", "?ke", "key?"],
+        "body": ["key?(${1:key})"],
+        "description": "Returns true if key is a key in self, otherwise false."
+    },
+    "value?(value)": {
+        "prefix": ["?v", "?va", "value?"],
+        "body": ["value?(${1:value})"],
+        "description": "Returns true if value is a value in self, otherwise false."
+    },
+    "delete(object)": {
+        "prefix": ["d", "de", "delete"],
+        "body": ["delete(${1:object})"],
+        "description": "Removes zero or more elements from self based on object."
+    },
+    "invert": {
+        "prefix": ["d", "de", "invert"],
+        "body": ["invert"],
+        "description": "Returns a new Hash object with the each key-value pair inverted."
+    }
+}
