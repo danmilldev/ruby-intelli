@@ -70,22 +70,22 @@
         "description": "Returns the number of bytes in the machine representation of self; the value is system-dependent:"
     },
     "to_d": {
-        "prefix": ["to", "_", "to_d"],
+        "prefix": ["to", "_d", "_", "to_d"],
         "body": ["to_d"],
         "description": "Returns the value of int as a BigDecimal.\nRequires to have: \nrequire 'bigdecimal'\nrequire 'bigdecimal/util.'"
     },
     "to_f": {
-        "prefix": ["to", "_", "to_f"],
+        "prefix": ["to", "_f", "_", "to_f"],
         "body": ["to_f"],
         "description": "Converts self to a Float."
     },
     "to_i": {
-        "prefix": ["to", "_", "to_i"],
+        "prefix": ["to", "_i", "_", "to_i"],
         "body": ["to_i"],
         "description": "Converts self to a Integer."
     },
     "to_s": {
-        "prefix": ["to", "_", "to_s"],
+        "prefix": ["to", "_s", "_", "to_s"],
         "body": ["to_s"],
         "description": "Converts self to a String."
     },
