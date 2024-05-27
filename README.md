@@ -2,6 +2,9 @@
 
 Welcome to the Ruby-Intelli extension! This extension is designed to accelerate your development process with .rb files. It suggests a decent number of code snippets based on your input and explains the methods.
 
+Available to download here:
+https://marketplace.visualstudio.com/items?itemName=DanielMiller.ruby-intelli
+
 ## Features
 
 - A collection of standard Ruby methods
