@@ -1,12 +1,117 @@
 {
+    "ascii_only?": {
+        "prefix": ["?ao", "ao"],
+        "body": ["ascii_only?"],
+        "description": "Returns true if self contains only ASCII characters, false otherwise."
+    },
+    "capitalize": {
+        "prefix": ["cap", "cp", "capitalize"],
+        "body": ["capitalize"],
+        "description": "Returns a string containing the characters in self; the first character is upcased."
+    },
+    "capitalize!": {
+        "prefix": ["!c", "!ca", "cp", "capitalize"],
+        "body": ["capitalize!"],
+        "description": "Returns a string containing the characters in self; the first character is upcased."
+    },
+    "center": {
+        "prefix": ["center", "ce"],
+        "body": ["center"],
+        "description": "Returns a centered copy of self."
+    },
+    "chars": {
+        "prefix": ["chars", "ch"],
+        "body": ["chars"],
+        "description": "Returns an array of the characters in self."
+    },
+    "chomp": {
+        "prefix": ["chomp", "ch"],
+        "body": ["chomp"],
+        "description": "Returns a copy.\nAnd removes the last one or two characters if they are '\\r', '\\n', or '\\r\\n' (but not '\\n\\r'):"
+    },
+    "chomp(line)": {
+        "prefix": ["chomp", "ch"],
+        "body": ["chomp(${1:line})"],
+        "description": "Returns a copy.\nAnd removes everything that is inside the line."
+    },
+    "chomp!": {
+        "prefix": ["chomp", "!c", "!ch"],
+        "body": ["chomp!"],
+        "description": "Like .chomp, but modifies self in place; returns nil if no modification made, self otherwise."
+    },
+    "chomp!(line)": {
+        "prefix": ["chomp", "!c", "!ch"],
+        "body": ["chomp!(${1:line})"],
+        "description": "Like .chomp, but modifies self in place; returns nil if no modification made, self otherwise."
+    },
+    "clear": {
+        "prefix": ["clear", "cl"],
+        "body": ["clear"],
+        "description": "Removes the contents of self."
+    },
+    "concat(objects)": {
+        "prefix": ["c", "co", "concat"],
+        "body": ["concat(${1:objects})"],
+        "description": "Concatenates each object in objects to self and returns self."
+    },
+    "count(selector)": {
+        "prefix": ["count", "co"],
+        "body": ["count(${1:selector})"],
+        "description": "Returns the total number of characters in self that are specified by the given selectors."
+    },
+    "downcase": {
+        "prefix": ["do", "downcase"],
+        "body": ["downcase"],
+        "description": "Returns a string containing the downcased characters in self."
+    },
+    "downcase!": {
+        "prefix": ["!d", "!do", "downcase!"],
+        "body": ["downcase!"],
+        "description": "Downcases the characters in self; returns self if any changes were made, nil otherwise."
+    },
     "gsub(pattern, replacement)": {
         "prefix": ["g", "gs"],
         "body": ["gsub($1)"],
         "description": "Returns a copy of self with all occurrences of the given pattern replaced."
     },
     "gsub!(pattern, replacement)": {
-        "prefix": ["g", "gs", "gs!"],
+        "prefix": ["g", "gs", "gs!", "!g", "!gs"],
         "body": ["gsub!($1)"],
         "description": "Performs the specified substring replacement(s) on self;\nReturns self if any replacement occurred, nil otherwise."
+    },
+    "include?(object)": {
+        "prefix": ["i", "in", "?in", "?i", "include?"],
+        "body": ["include(${1:object})"],
+        "description": "Returns true if self is containing object."
+    },
+    "length": {
+        "prefix": ["length"],
+        "body": ["length"],
+        "description": "Returns the length of Self."
+    },
+    "split(seperator)": {
+        "prefix": ["s", "sp", "split"],
+        "body": ["split"],
+        "description": "Returns a new Array seperated by the seperator."
+    },
+    "strip(seperator)": {
+        "prefix": ["s", "st", "strip"],
+        "body": ["strip(${1:seperator})"],
+        "description": "Returns a copy of the receiver with leading and trailing whitespace removed."
+    },
+    "strip!(seperator)": {
+        "prefix": ["!s", "!st", "s", "st", "strip!"],
+        "body": ["strip!(${1:seperator})"],
+        "description": "Returns self with leading and trailing whitespace removed."
+    },
+    "upcase": {
+        "prefix": ["upcase", "u", "up"],
+        "body": ["upcase"],
+        "description": "Returns a string containing the upcased characters in self."
+    },
+    "upcase!": {
+        "prefix": ["upcase", "u", "up", "!u", "!up"],
+        "body": ["upcase!"],
+        "description": "Upcases the characters in self."
     }
 }
