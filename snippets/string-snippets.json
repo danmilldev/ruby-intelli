@@ -113,5 +113,25 @@
         "prefix": ["upcase", "u", "up", "!u", "!up"],
         "body": ["upcase!"],
         "description": "Upcases the characters in self."
+    },
+    "empty?": {
+        "prefix": ["?e", "?em", "e", "empty?"],
+        "body": ["empty?"],
+        "description": "Returns true if a string is empty. False otherwise."
+    },
+    "reverse": {
+        "prefix": ["reverse"],
+        "body": ["reverse"],
+        "description": "Returns a copy of the string which will be reversed."
+    },
+    "reverse!": {
+        "prefix": ["reverse!", "!r", "!re"],
+        "body": ["reverse!"],
+        "description": "Returns self being reversed."
+    },
+    "insert(index, object)": {
+        "prefix": ["insert"],
+        "body": ["insert(index, object)"],
+        "description": "Inserts object at the specified index."
     }
 }
